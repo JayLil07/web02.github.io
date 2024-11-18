@@ -1,0 +1,486 @@
+:root {
+    --primaryColour: #563C39;
+    --secondaryColour: #AF7A6D;
+    --lightColour: #EAEAEA;
+    --darkColour: #211A1E;
+    --contrastColour: #5688C7;
+    --white: #fff;
+    --mainBorderThickness: 10px solid;
+    --fontFamily: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} /* declare variables, ADVANCED CSS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+} /* reset website */
+
+body {
+    background-color: var(--lightColour);
+    color: var(--darkColour);
+    font-family: var(--fontFamily);
+}
+   
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--darkColour);
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.button {
+    display: inline-block;
+    margin-block: 20px;
+}
+
+main:not(#firstScreen) {
+    margin-inline-start: 2.5vi;
+    margin-block-start: 2.5vi;
+}
+
+#title {
+    font-size: 3.5em;
+    margin-block-end: 2vi;
+    color: var(--contrastColour);
+    grid-column: span 3;
+}
+
+h4 {
+    margin-block-end: 5px;
+    color: var(--primaryColour);
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 1.05em;
+}
+
+.image {
+    inline-size: 100%;
+    height: auto;
+}
+
+.gridByTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+/* ADVANCED CSS */
+.gridByThree {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: min-content;
+    align-items: center;
+}
+
+
+/* beginning of top bar css */
+#topBar {
+    border-block-end: 10px solid var(--primaryColour);
+}
+
+#topBar nav>ul {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.15em;
+    margin-block-end: 10px;
+} /* ADVANCED CSS */
+
+header h2 {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    color: var(--primaryColour);
+}
+
+header h1 {
+    align-content: center;
+}
+
+#topBar nav ul li a {
+    color: var(--contrastColour);
+}
+
+/* ADVANCED CSS */
+#topBar nav ul li:nth-of-type(2), #topBar nav ul li:last-of-type {
+    display: none;
+}
+/* end of top bar css */
+
+
+/* beginning of footer css */
+footer {
+    background-color: var(--secondaryColour);
+    justify-items: center;
+}
+
+footer nav ul li {
+    padding-block-start: 4vh;
+}
+
+footer nav ul li a {
+    padding: 15px;
+}
+
+small {
+    font-weight: bold;
+    grid-column: span 3;
+    text-align: center;
+    padding-block-start: 1vh;
+    padding-block-end: 4vh;
+}
+
+small a {
+    padding: 7px;
+}
+
+footer div, footer address {
+    text-align: center;
+}
+/* end of footer css */
+
+
+/* beginning of index css */
+#firstScreen aside {
+    /* ADVANCED CSS */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url('../images/PoolDog.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    color: var(--lightColour);
+    padding: 30px;
+}
+
+#firstScreen aside h2 {
+    font-size: 3.5em;
+    grid-column: span 2;
+}
+
+#firstScreen aside h3 {
+    font-size: 2em;
+    grid-column: span 3;
+    margin-block-end: 10vi;
+}
+
+#firstScreen aside p {
+    font-size: 1.25em;
+    grid-column: 2 / 4;
+    text-align: center;
+
+}
+
+#firstScreen section h3 {
+    font-size: 1.5em;
+    margin-block: 20px;
+}
+
+#firstScreen section p {
+    margin-block-end: 20px;
+}
+
+#firstScreen section {
+    border: var(--mainBorderThickness) var(--primaryColour);
+    border-radius: 7%;
+    box-shadow: 5px 5px 5px var(--darkColour);
+    padding: 20px;
+    margin: 3em;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#firstScreen section a {
+    border: 5px solid var(--contrastColour);
+    border-radius: 70px;
+    padding: 15px;
+}
+
+#firstScreen .gridByTwo {
+    gap: 20px;
+}
+/* end of index css */
+
+
+/* contact css */
+#contact a {
+    font-weight: normal;
+    text-decoration: underline;
+    padding: 0;
+}
+
+#contact h4 {
+    margin-block-start: 40px;
+}
+
+#contact section:last-of-type {
+    margin: 0 2em 2em 2em;
+}
+
+form {
+    padding: 3vi;
+    border: var(--mainBorderThickness) var(--primaryColour);
+}
+
+input, select, textarea {
+    block-size: 2.5em;
+    border-radius: 7px;
+    font-size: 1rem;
+    border: 1px solid var(--secondaryColour);
+    font-family: var(--fontFamily);
+    margin-block-end: 15px;
+    width: 100%;
+}
+
+/* ADVANCED CSS */
+input[type="submit"], input[type="reset"] { 
+    border: 2px solid var(--secondaryColour);
+    background-color: var(--white);
+}
+
+textarea {
+    min-height: 200px;
+}
+/* end of contact css */
+
+
+/* questions css */
+#faq {
+    margin-block-end: 3vi;
+    gap: 15px;
+}
+
+#faq section {
+    border: 5px solid var(--primaryColour);
+    border-radius: 10px;
+    padding: 10px;
+    grid-column: span 3;
+}
+
+#faq section h4 {
+    padding-block-end: 5px;
+}
+
+#faq section h4::before {
+    content: "Q: ";
+} /* ADVANCED CSS */
+
+#faq section p::before {
+    content: "A: ";
+}
+/* end of questions css */
+
+
+/* daycare css */
+#daycare section {
+    margin-inline: 2em;
+}
+
+#daycare div {
+    margin-block: 2em;
+}
+
+#daycare img, #daycare div {
+    grid-column: span 2;
+}
+
+#daycare h4 {
+    font-size: 1.35em;
+}
+
+#daycare p, #daycare h4 {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border: solid 2px var(--primaryColour);
+    border-collapse: collapse;
+    width: 80%;
+    font-size: 1.25em;
+}
+
+td, th {
+    padding: 3px;
+    border: solid 1px var(--primaryColour);
+}
+
+tr:nth-of-type(even) {
+    background-color: var(--white);
+}
+
+td:not(:first-of-type) {
+    text-align: center;
+}
+/* end of daycare css */
+
+@media all and (min-width: 768px) {
+
+    /* general css */
+    a:hover { /* ADVANCED CSS */
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+    main section>div {
+        overflow: hidden;
+    }
+
+    #title {
+        font-size: 3.5em;
+        margin-inline-start: 15px;
+        margin-block-start: 10px;
+    }
+
+    .image {
+        inline-size: calc(40vi - 40px);
+    } /* ADVANCED CSS */
+
+    /* beginning of top bar css */
+    .logo {
+        margin-inline-start: 1vi;
+    }
+
+    #topBar {
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto 1fr;
+    }
+
+    #topBar nav ul li:nth-of-type(2), #topBar nav ul li:last-of-type {
+        display: inline;
+    }
+
+    #topBar nav ul li a {
+        padding: 5px;
+    }
+
+    #topBar nav>ul {
+        margin-block-end: 0;
+    }
+    /* end of top bar css */
+
+    
+    /* index css */
+    #firstScreen aside {
+        height: 100vh;
+    }
+
+    #firstScreen aside h2 {
+        margin-inline-start: 2.5vi;
+        margin-block-start: 2.5vi;
+        font-size: 4em;
+    }
+
+    #firstScreen aside h3 {
+        margin-inline-start: 2.5vi;
+        font-size: 2.5em;
+    }
+
+    #firstScreen aside p {
+        margin-block-start: 5vi;
+        font-size: 1.5em;
+    }
+
+    #firstScreen section:first-of-type img {
+        float: left;
+        margin-inline-end: 30px;
+    }
+
+    #firstScreen section:last-of-type img {
+        float: right;
+        margin-inline-start: 30px;
+    }
+
+    #firstScreen section {
+        border-radius: 0;
+    }
+    /* end of index css */
+
+
+    /* contact css */
+    #contact {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    #contact section:first-of-type {
+        display: inline;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        row-gap: 15px;
+        column-gap: 5px;
+    }
+
+    label {
+        justify-self: end;
+    }
+
+    /* ADVANCED CSS */
+    label:not(label:last-of-type) {
+        align-content: center;
+    }
+
+    /* ADVANCED CSS */
+    label::after {
+        content: ":";
+    }
+
+    #actions {
+        grid-column: 2;
+    }
+
+    input, select {
+        margin-block-end: 0px;
+        max-inline-size: fit-content;
+    }
+
+    input[type="reset"] {
+        margin-inline-start: 10px;
+    }
+
+    /* ADVANCED CSS */
+    input[type="reset"]:hover, input[type="submit"]:hover {
+        border: 2px solid var(--primaryColour);
+    }
+    /* end of contact css */
+
+
+    /* questions css */
+    #faq section {
+        grid-column: span 1;
+    }
+    /* end of questions css */
+
+
+    /* daycare css */
+    #daycare section {
+        margin-block-end: 3em;
+        margin-inline: 10vi;
+        gap: 20px;
+        align-items: center;
+        grid-auto-rows: min-content;
+    }
+
+    #daycare div {
+        grid-column: 2 / 3;
+        align-items: center;
+    }
+
+    #daycare img {
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
+        align-self: start;
+        inline-size: calc(40vi - 40px);
+    }
+    /* end of daycare css */
+}
